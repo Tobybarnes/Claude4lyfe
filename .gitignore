@@ -38,9 +38,8 @@ Icon?
 *.log
 *.jsonl
 
-# Skills directory (symlink to another location)
-skills
-skills.json
+# Skills - now included in repo
+# skills.json
 
 # Other
 image-cache/
