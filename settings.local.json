@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(rams)",
+      "Bash(source ~/.zshrc)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(sips:*)",
+      "Bash(chmod:*)",
+      "Bash(osascript:*)",
+      "WebSearch",
+      "WebFetch(domain:apps.apple.com)",
+      "WebFetch(domain:www.albumstheapp.com)",
+      "WebFetch(domain:www.macstories.net)",
+      "WebFetch(domain:appadvice.com)",
+      "WebFetch(domain:albumstheapp.substack.com)",
+      "mcp__gworkspace__search_drive",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:mm-design-wins.quick.shopify.io)",
+      "Bash(ping:*)",
+      "WebFetch(domain:ping.quick.shopify.io)",
+      "Bash(~/.quick-ping/quick-ping.sh:*)",
+      "Bash(test:*)",
+      "Bash(mdfind:*)",
+      "Bash(/usr/libexec/PlistBuddy:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)"
+    ]
+  }
+}

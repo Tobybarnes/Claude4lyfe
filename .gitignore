@@ -1,0 +1,47 @@
+# Sensitive - Never commit
+.credentials.json
+*.key
+*.pem
+*secret*
+*token*
+
+# Cache and temporary files
+cache/
+debug/
+session-env/
+shell-snapshots/
+telemetry/
+stats-cache.json
+statsig/
+paste-cache/
+file-history/
+downloads/
+
+# Temporary state
+tasks/
+todos/
+teams/
+plans/
+
+# Tool results (may contain sensitive data from MCP servers)
+projects/*/tool-results/
+projects/*/sessions-index.json
+
+# History (private conversations)
+history.jsonl
+
+# OS files
+.DS_Store
+Icon?
+
+# Large or generated files
+*.log
+*.jsonl
+
+# Skills directory (symlink to another location)
+skills
+skills.json
+
+# Other
+image-cache/
+plugins/
