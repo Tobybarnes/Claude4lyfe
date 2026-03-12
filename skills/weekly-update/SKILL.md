@@ -91,7 +91,7 @@ Pull from:
 | Product Sourcing | Jeff Kraemer | #mm-network-team |
 | Foundations | Jeff Kraemer | #mm-foundations-design |
 | Innovation | Kazden Cattapan | #proj-growth-agent |
-| Brand | David Diliberto | #mm-brand-design-team |
+| Brand | Alex Anderson | #mm-brand-design-team |
 
 ## Process
 
@@ -333,45 +333,12 @@ When the user requests team review, launch these four collaborating agents to wo
 
 ## Team Review Process
 
-1. **Create collaboration space:**
-   ```
-   - Use mcp__claudeception__create_project with title "Weekly Update Review - [Date]"
-   - Use mcp__claudeception__generate_conversation with the project_id
-   ```
+When the user requests team review, apply each agent perspective sequentially:
 
-2. **Provide context to agents:**
-   ```
-   - Use mcp__claudeception__append_conversation to add:
-     * The current draft content from weekly-draft.md
-     * The goal: Improve this weekly update to Carl (CDO) for VP-level impact
-     * Reference feedback patterns from team-feedback-patterns.md showing proven before/after examples
-     * Success criteria:
-       - Strategic impact over operational updates
-       - Leadership visibility (Toby's role in driving outcomes)
-       - Business metrics and merchant impact
-       - Visual excellence and design craft
-       - Shopify design alignment and Carl's priorities
-     * Instructions:
-       - Review against the feedback patterns document
-       - Each agent provides specialized perspective
-       - Collaborate to provide coordinated, actionable feedback
-       - Use before/after examples to illustrate improvements
-   ```
-
-3. **Launch collaborating agents:**
-   ```
-   - Use mcp__claudeception__launch_collaborating_agents with:
-     * conversation_id from step 1
-     * agents array with the four team members
-     * max_cycles: 5 (allows for collaborative back-and-forth)
-   ```
-
-4. **Retrieve team feedback:**
-   ```
-   - After collaboration completes, use mcp__claudeception__read_conversation
-   - Summarize the key recommendations from each agent
-   - Present the coordinated feedback to the user
-   ```
+1. **Read the draft** from weekly-draft.md
+2. **Read feedback patterns** from team-feedback-patterns.md
+3. **Apply each agent lens** (Executive Coach, Creative Director, Product Ops, Principal Designer) and synthesize feedback
+4. **Present coordinated recommendations** with before/after examples where helpful
 
 ## Guidelines
 

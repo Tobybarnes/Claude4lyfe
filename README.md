@@ -74,7 +74,7 @@ cp -r ~/.claude-backup/* ~/.claude/
 
 # Set permissions for hooks
 chmod +x ~/.claude/*.sh
-chmod +x ~/.quick-ping/*.sh  # if you use quick-ping
+chmod +x ~/Documents/MyEP/projects/noisy-claude/*.sh  # if you use noisy-claude
 
 # If using symlinked skills (optional):
 # rm ~/.claude/skills

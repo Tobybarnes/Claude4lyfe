@@ -107,7 +107,7 @@ Use text emojis for reliability:
 | 03 | network | Product Sourcing | Jeff Kraemer |
 | 04 | foundations | Foundations | Jeff Kraemer |
 | 05 | growth | Growth Agent | Kazden Cattapan |
-| 06 | brand | Brand | David Diliberto |
+| 06 | brand | Brand | Alex Anderson |
 
 ## Deployment Reminder
 

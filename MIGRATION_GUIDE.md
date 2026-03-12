@@ -25,7 +25,7 @@ Your personal productivity skills:
 ### 3. **Hooks & Scripts** (`~/.claude/*.sh`)
 - **agent-sims-hook.sh** - The "working/thinking/offline" status sounds
 - **notify.sh** - Notification handler
-- **quick-ping** integration
+- **noisy-claude** integration
 
 ### 4. **MCP Servers**
 - vault-mcp - Your knowledge vault
@@ -72,7 +72,7 @@ This creates: `~/claude-migration-[date].tar.gz`
    - Make sure hook scripts are executable:
    ```bash
    chmod +x ~/.claude/*.sh
-   chmod +x ~/.quick-ping/*.sh
+   chmod +x ~/Documents/MyEP/projects/noisy-claude/*.sh
    ```
 
 6. **Test Your Setup**

@@ -61,9 +61,9 @@ fi
 # Copy hook scripts
 echo "🔔 Copying hooks..."
 cp "$HOME/.claude/"*.sh "$TEMP_DIR/.claude/" 2>/dev/null || true
-if [ -d "$HOME/.quick-ping" ]; then
-  mkdir -p "$TEMP_DIR/.quick-ping"
-  cp -r "$HOME/.quick-ping/"* "$TEMP_DIR/.quick-ping/" 2>/dev/null || true
+if [ -d "$HOME/noisy-claude" ]; then
+  mkdir -p "$TEMP_DIR/noisy-claude"
+  cp -r "$HOME/noisy-claude/"* "$TEMP_DIR/noisy-claude/" 2>/dev/null || true
 fi
 
 # Create the bundle info file

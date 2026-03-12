@@ -1,17 +1,28 @@
 {
+  "mcpServers": {},
   "apiKeyHelper": "/opt/dev/bin/user/devx llm-gateway print-token --key",
   "env": {
     "ANTHROPIC_BASE_URL": "https://proxy.shopify.ai/vendors/anthropic-claude-code",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(*)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "mcp__pencil"
+    ]
   },
+  "model": "opus",
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "vault-mcp",
     "figma-mcp",
-    "gworkspace-mcp"
+    "gworkspace-mcp",
+    "agentation"
   ],
   "hooks": {
     "PreToolUse": [
@@ -21,6 +32,12 @@
           {
             "type": "command",
             "command": "/Users/tobybarnes_shop/.claude/agent-sims-hook.sh working"
+          },
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
           }
         ]
       }
@@ -32,6 +49,23 @@
           {
             "type": "command",
             "command": "/Users/tobybarnes_shop/.claude/agent-sims-hook.sh thinking"
+          },
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/.claude/hooks/qmd-sync.sh",
+            "timeout": 10,
+            "async": true
           }
         ]
       }
@@ -49,9 +83,21 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/tobybarnes_shop/.quick-ping/quick-ping.sh",
-            "async": true,
-            "timeout": 5
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
           }
         ]
       }
@@ -62,6 +108,16 @@
           {
             "type": "command",
             "command": "/Users/tobybarnes_shop/.claude/notify.sh"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
           }
         ]
       }
@@ -80,9 +136,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/tobybarnes_shop/.quick-ping/quick-ping.sh",
-            "async": true,
-            "timeout": 5
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
           }
         ]
       }
@@ -92,12 +148,37 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/tobybarnes_shop/.quick-ping/quick-ping.sh",
-            "async": true,
-            "timeout": 5
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/tobybarnes_shop/Documents/MyEP/projects/noisy-claude/noisy-claude.sh",
+            "timeout": 5,
+            "async": true
           }
         ]
       }
     ]
-  }
+  },
+  "effortLevel": "medium"
 }

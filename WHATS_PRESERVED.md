@@ -24,7 +24,7 @@ Everything that makes our working relationship feel natural and efficient transf
 ### 3. **The Sounds** 🔊
 - ✅ **agent-sims-hook.sh** - "working", "thinking", "offline" status sounds
 - ✅ **notify.sh** - Notification handler
-- ✅ **quick-ping** - Session notifications
+- ✅ **noisy-claude** - Sound feedback for Claude Code sessions
   - These hooks make it feel alive and responsive
 
 ### 4. **Your Context** 📁
@@ -72,7 +72,7 @@ claude-migration-[date].tar.gz
 3. **Hook permissions**
    ```bash
    chmod +x ~/.claude/*.sh
-   chmod +x ~/.quick-ping/*.sh
+   chmod +x ~/Documents/MyEP/projects/noisy-claude/*.sh
    ```
 
 ## The Magic ✨
